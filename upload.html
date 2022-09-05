@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/upload.js" defer></script>
+    <title>UPLOAD - KnowDer</title>
+</head>
+<body onload="loaded()">
+    <a href="catalog.html">Back to catalog</a>
+    <br>
+    <button id="LogOut">LogOut</button>
+    <br><br>
+    <form action="backend/upload.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="user_id" id="user_id" placeholder="DO NOT TOUCH">
+        <br><br>
+        <p>Course Title:</p>
+        <input type="text" id="category_title" name="title" placeholder="Enter your category title">
+        <br>
+        <p>Course Description:</p>
+        <input type="text" id="description" name="description" placeholder="Enter your category description">
+        <br>
+        <p>Course Keywords:</p>
+        <input type="text" id="keywords" name="keywords" placeholder="Enter your category keywords">
+        <br>
+        <p>Избери тъмбнейл:</p>
+        <input name="fileToUpload" type="file" id="thumbnail">
+        <br>
+        <p>Избери категория:</p>
+        <div id="categories"></div>
+        <input type="text" name="category" id="category_inp" placeholder="DO NOT TOUCH">
+        <br>
+        <br>
+        <button onclick="uploadHall()">UPLOAD</button>
+    </form>
+</body>
+</html>
