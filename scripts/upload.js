@@ -4,7 +4,7 @@ var category = 0;
 var username = sessionStorage.getItem("username");
 var mail = sessionStorage.getItem("mail");
 var admin = sessionStorage.getItem("admin");
-if(username != null && username.length > 2 && mail != null && mail.length > 2 && admin){
+if(username != null && username.length > 2 && mail != null && mail.length > 2 && admin == "true"){
     pass();
 }else{
     window.location.href = "index.html";
