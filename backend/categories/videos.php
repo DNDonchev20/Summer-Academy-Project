@@ -3,7 +3,7 @@ require "../db.php";
 
 error_reporting(0);
 
-$data = ['id' => [], 'course_id' => [], 'title' => [], 'path' => [], 'description' => []];
+$data = ['id' => [], 'course_id' => [], 'title' => [], 'path' => [], 'description' => [], 'path' => []];
 
 $course_id = $_GET['course_id'];
 $userid = $_GET['user_id'];

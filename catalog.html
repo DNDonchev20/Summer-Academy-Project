@@ -4,21 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--
     <script src="https://www.paypal.com/sdk/js?client-id=ARRTYtGt_A8AIOTUVBSPCs_IRKjNXXuyS-YS5IIavYR-3v5kdO5KXXafHcPnpkq3wZrPgalprQdXQm2T&currency=USD"></script>
+	-->
     <script src="scripts/catalog.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="./assets/favicon.ico"/>
-    <title>+Умения - Важните умения за живота, на които не те учат в училище</title>
+    <link rel="stylesheet" href="css/style.css">
+	<!--<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Начало - Важните умения за живота, на които не те учат в училище - +умения</title>
 </head>
-<body onload="loaded()">
-    <p id="user"></p>
+ <body onload="on_load()">
+    <p id="user" style="display: none"></p>
 
+	<!--
     <p id="is_payed"></p>
     <div id="paypal-button-container"></div>
     <br><br>
-    <button id="LogOut">LogOut</button>
-    <br><br>
-    <div id="categories"></div>
-    <div id="catalog"></div>
-    <div id="videos"></div>
+	-->
+	<div class="sticky"> 
+		<ul class="menu menu-home sticky">
+    	    <a href="index.html"><img src="assets/img/logo_w.png" alt=""></a>
+			<!--<li class="active" class="nav"><a class="nav-link active" href="index.html">Начало</a></li>-->
+			<!--<li class="nav"><a class="nav-link" href="#categories" > Категории </a></li>-->
+			<!--<li class="nav"> <a class="nav-link" href="#">За нас</a></li>-->
+    	    <li class="nav" style="display: none"><a href="./login.html" class="btn-nav login-reg">Вход</a></li>
+    	    <li class="nav" style="display: none"><a href="./register.html" class="btn-nav login-reg">Регистрация</a></li>
+    	    <li class="nav" style="display: none"><button class="btn-nav logout" id="LogOut">Изход</button></li>
+    	</ul>
+    </div>
+
+	<div id="home">
+    	<section id="hero" class="hero-section">
+    	    <div class="hero-text">
+				<p class="white-text">Важните умения за живота, на които не те учат в училище</p>
+				<button class="white-text btn-home" onclick="document.querySelector('#categories').scrollIntoView({behavior:'smooth',block:'center'})">Започни сега</button>
+    	    </div>
+			<div class="overlay"></div>
+    	</section>
+
+    	<section id="icons" class="icons-section">
+    	    <div class="icon">
+    	        <i class="fa-solid fa-medal"></i>
+    	        <p>Важните умения за живота, на които не те учат в училище</p>
+    	    </div>
+    	    <div class="icon">
+    	        <i class="fa-solid fa-video"></i>
+    	        <p>Лесно разбираем и запомнящ се формат</p>
+    	    </div>
+    	    <div class="icon">
+    	        <i class="fa-solid fa-gamepad"></i>
+    	        <p>Ученето като игра</p>
+    	    </div>
+    	    <div class="icon">
+    	        <i class="fa-solid fa-user-tie"></i>
+    	        <p>Съдържание, създадено от експерти</p>
+    	    </div>
+    	    <div class="icon">
+    	        <i class="fa-solid fa-list-check"></i>
+    	        <p>Разнообразие от категории</p>
+    	    </div>
+    	    <div class="icon">
+    	        <i class="fa-solid fa-person-chalkboard"></i>
+    	        <p>Безплатен първи урок</p>
+    	    </div>
+    	</section>
+
+    	<h2>Категории</h2>
+    	 <section id="categories" class="categories-section">
+    	 </section>
+	</div>
+
+	<div><button id="back-btn"><i class="fa-sharp fa-solid fa-arrow-left"></i></button></div>
+	<div id="spinner"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+	<section id="courses-container"><h2 id="courses-title"></h2><div id="courses"></div></section>
+    <section id="videos-container">
+		<div id="details"></div>
+		<div id="videos"></div>
+	</section>   
+
+     <footer>
+        <div class="footer-links">
+            <a href="#">Условия за ползаване</a>
+            <a href="#">Политика за поверителност</a>
+            <a href="#">Политика за бисквитки</a>
+        </div>
+        <div class="footer-icons white-text" >
+            <div class="footer-second-row">
+                <a href="tel:0885380506" class="white-text"><i id="phone" class="fa-sharp fa-solid fa-phone white-text">  </i>    0885380506</a>
+            <a class="mail-footer white-text" href="mailto:angel.balashev@gmail.com"><i id="email" class="fa-solid fa-envelope white-text">  </i>  angel.balashev@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-third-row">
+            <a href="https://www.instagram.com/%22%3E"> <i id="instagram" class="fa-brands fa-instagram white-text"></i></a>
+           <a href="https://www.tiktok.com/@plus_umeniq%22%3E"> <i id="tiktok" class="fa-brands fa-tiktok white-text"></i></a>
+           <a href="https://bg-bg.facebook.com/%22%3E"> <i id="facebook" class="fa-brands fa-facebook-f white-text"></i></a>
+       </div>
+     </footer>
+
+<script src="https://kit.fontawesome.com/a1312d148e.js" crossorigin="anonymous"></script>
+<!--<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+<script src="scripts/navbar.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>

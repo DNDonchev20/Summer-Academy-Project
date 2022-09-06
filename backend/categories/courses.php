@@ -1,7 +1,7 @@
 <?php
 require "../db.php";
 
-$data = ['id' => [], 'category_id' => [], 'title' => [], 'description' => [], 'keywords' => [], 'user_id' => [], 'date' => [], 'views' => [], 'thumbnail' => []];
+$data = ['id' => [], 'category_id' => [], 'title' => [], 'description' => [], 'keywords' => [], 'user_id' => [], 'date' => [], 'likes' => [], 'thumbnail' => []];
 
 $category_id = $_GET['category_id'];
 
@@ -17,7 +17,7 @@ if ($result) {
     $data['description'][] = $row['description'];
     $data['keywords'][] = $row['keywords'];
     $data['date'][] = $row['date'];
-    $data['views'][] = $row['views'];
+    $data['likes'][] = $row['likes'];
     $data['thumbnail'][] = $row['thumbnail'];
   }
 }
