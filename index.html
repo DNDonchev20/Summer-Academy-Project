@@ -1,7 +1,10 @@
+<html>
+<head>
+<title>Redirecting</title>
 <script>
     var userId = localStorage.getItem("user_id");
     var userKey = localStorage.getItem("user_key");
-    if(userId != null && userId.length > 2 && userKey != null && userKey.length > 2 && userKey != 0 && userId != 0 && userKey != "null" && userId != "null"){
+    if(userId && userId != 'undefined' && userId.length > 2 && userKey && userKey.length > 2 && userId != 'undefined'){
                     fetch(`backend/checkLoged.php?webkey=${userKey}&userid=${userId}`)
                     .then(function(response) {
                         if (response.status >= 200 && response.status < 300) {
@@ -35,8 +38,9 @@
                         });
 
     }else{
-        sessionStorage.setItem("phone", 0);
         sessionStorage.setItem("mail", 0);
         window.location.href = "home.html";
     }
 </script>
+</head>
+</html>
