@@ -16,9 +16,14 @@
                             data = JSON.parse(response);
                             if(data.status == "confirmed"){
                                 if(data.admin == 1){
-                                    sessionStorage.setItem("admin", true);
+                                    sessionStorage.setItem("admin", "true");
                                 }else{
-                                    sessionStorage.setItem("admin", true);
+                                    sessionStorage.setItem("admin", "false");
+                                }
+                                if(data.payed == "payed"){
+                                    sessionStorage.setItem("payed", "true");
+                                }else{
+                                    sessionStorage.setItem("payed", "false");
                                 }
                                 sessionStorage.setItem("username", data.username);
                                 sessionStorage.setItem("mail", data.mail);

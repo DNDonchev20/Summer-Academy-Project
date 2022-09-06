@@ -53,6 +53,7 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 $path = basename( $_FILES["fileToUpload"]["name"]);
 
+
 $query="INSERT INTO lessons (
     course_id, title, description, path
 ) VALUES (:course_id, :title, :description, :path)";
