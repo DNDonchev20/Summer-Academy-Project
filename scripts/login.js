@@ -30,13 +30,14 @@ document.querySelector("button").addEventListener("click",  () => {
                         throw new Error(response.statusText)
                     })
                     .then(function(response) {
+						console.log(response);
                             data = JSON.parse(response);
-                            if(data.status == "noacc"){
+                            if(data.msg){
                                 document.getElementById("generalError").style.display = "block";
-                                document.getElementById("generalError").innerHTML = "Сгрешен e-mail или парола.";
+                                document.getElementById("generalError").innerHTML = data.msg;
                             }else{
-                                let userKey = data.user_key;
-                                let nameUser = data.user_id;
+                                let nameUser = data.data.user_id;
+                                let userKey = data.data.user_key;
                                 localStorage.setItem("user_id", nameUser);
                                 localStorage.setItem("user_key", userKey);
                                 window.location.href = "./index.html";
