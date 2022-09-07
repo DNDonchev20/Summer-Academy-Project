@@ -147,7 +147,15 @@ ul.menu > li .nav-link:hover {
   background: #f09818;
   margin-top: -.4rem;
   padding-top: 11px;
+  text-align: center;
 }
+#LogIn{
+  padding-left: 10px;
+}
+#LogInCat{
+  padding-left: 10px;
+}
+
 
 .uncentered {
   padding-left: 35px;
