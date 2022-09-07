@@ -6,7 +6,6 @@ let title = '';
 
 if(!username || !mail) {
     //window.location.href = "index.html";
-	document.querySelector('.logout').style.display = 'none';
 } else {
 	document.querySelectorAll('.login-reg').forEach((e) => {e.style.display = 'none'});
 }

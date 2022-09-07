@@ -1,4 +1,5 @@
 /*all*/
+
 body{
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -46,94 +47,101 @@ h2{
 
 /*nav*/
 
+#navLogo{
+  margin-right: 55%;
+}
+
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-	box-shadow: rgba(0, 0, 0, 0.11) 0 4px 4px 4px;
+width: 100%;
+z-index: 100;
+box-shadow: rgba(0, 0, 0, 0.11) 0 4px 4px 4px;
+height: 60px;
 }
 
 ul.menu {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  flex-direction: row;
-  z-index: 1;
-  top: 0px;
-  margin: 0;
-  list-style: none;
-  background-color: #286CD2 ;
+display: flex;
+justify-content: center;
+list-style: none;
+flex-wrap: wrap;
+flex-direction: row;
+z-index: 1;
+margin: 0;
+list-style: none;
+background-color: #286CD2;
 }
 
 ul.menu > li {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  /*margin: 0px 16px 0 0;*/
-  margin-left: 6.3rem;
-  font-size: 18px;
+position: relative;
+display: flex;
+
+font-size: 18px;
+margin-left: 50px;
 }
 
 ul.menu > li .nav-link {
-  padding: 0;
-  text-decoration: none;
-  color: #ffffff;
-  display: inline-flex;
+padding: 0;
+text-decoration: none;
+color: #ffffff;
+display: inline-flex;
 }
 
 ul.menu > li.active .nav-link {
- color: #f09818;
+color: #f09818;
 }
 
 ul.menu > li .nav-link:hover {
-  color: #f09818;
+color: #f09818;
 }
 
 .nav, .active {
-  top: 18px;
-  justify-content: center;
-  left:60%;
+top: 18px;
+display: flex;
+justify-content: center;
 }
 
 .sticky img {
-    position: relative;
-    align-items: right;
-    top: 0px;
-    width: 120px;
+  position: relative;
+  align-items: right;
+  top: 0px;
+  width: 120px;
 }
 
 .btn-nav {
-  border: 0;
-  border-radius: 8px;
-  color: #FFFFFF;
-  font-size: 16px;
-  width: 100%;
-  height: 50%;
-  padding: 6px 9px;
-  text-decoration: none;
-  cursor: pointer;
-  background: #f09818;
-  margin-top: -.3rem;
+border: 0;
+border-radius: 8px;
+color: #FFFFFF;
+font-size: 16px;
+width: 100%;
+height: 40px;
+padding: 6px 9px;
+text-decoration: none;
+cursor: pointer;
+background: #f09818;
+margin-top: -.4rem;
 }
 
-
 /*hero*/
-.btn-home{
+.btn-home {
+  font-family: "Roboto", sans-serif;
   align-items: center;
-  background: #f09818;
+  background: #ffb140;
   border: 0;
   border-radius: 8px;
-  color: #FFFFFF;
-  font-size: 18px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 10px 15px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 25px;
   justify-content: center;
-  padding: 13px 16px;
+  line-height: 1em;
+  max-width: 50%;
+  min-width: 50px;
+  padding: 10px 12px;
   text-decoration: none;
   user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
-  /*margin-bottom: 30%;*/
+  margin-bottom: 30%;
   outline: 0;
 }
 
@@ -244,6 +252,7 @@ footer a:hover {
   justify-content: center;
   padding-top: 40px;
   font-size: 17px;
+  margin-left: 10px;
 }
 
 .footer-icons{
@@ -572,4 +581,44 @@ video {
 #courses-title {
 	margin-top: 0;
 	margin-bottom: 3rem;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .btn-home{
+    font-size: 20px;
+    max-width: 60%;
+  }
+
+  #navLogo{
+    margin-right: 50%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  
+  #navLogo{
+    margin-right: 40%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  
+  #navLogo{
+    margin-right: 35%;
+  }
+}
+
+@media only screen and (max-width: 835px) {
+  
+  #navLogo{
+    margin-right: 25%;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  
+  #navLogo{
+    margin-right: 20%;
+  }
 }
