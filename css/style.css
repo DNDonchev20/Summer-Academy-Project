@@ -88,8 +88,11 @@ ul.menu > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 18px;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 ul.menu > li .nav-link {
@@ -99,6 +102,9 @@ ul.menu > li .nav-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 ul.menu > li.active .nav-link {
@@ -133,13 +139,22 @@ ul.menu > li .nav-link:hover {
   border-radius: 8px;
   color: #FFFFFF;
   font-size: 16px;
-  width: 100%;
+  width: 110px;
   height: 40px;
   padding: 6px 9px;
   text-decoration: none;
   cursor: pointer;
   background: #f09818;
   margin-top: -.4rem;
+  padding-top: 11px;
+}
+
+.uncentered {
+  padding-left: 35px;
+}
+
+.centered {
+  padding-left: -8px;
 }
 
 /*hero*/
@@ -346,6 +361,7 @@ footer a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 10px;
 }
 
 .footer-icons a:hover {

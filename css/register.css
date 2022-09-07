@@ -17,7 +17,7 @@ textarea:focus, input:focus {
   height: 100vh;
   width: 100vw;
   background: #f4f4f4;
-  /*background: linear-gradient(150deg, rgb(0, 0, 179), rgb(7, 0, 68), rgb(0, 0, 0), rgb(0, 0, 0))*/
+  margin-bottom: 1000px;
 }
 
 #container {
@@ -38,7 +38,6 @@ textarea:focus, input:focus {
   padding-top: 25px;
   padding-bottom: 25px;
   background: #286CD2;
-  /*background: linear-gradient(135deg, rgb(12, 12, 12), rgb(32, 32, 32));*/
 }
 
 #container h1 {
@@ -134,7 +133,7 @@ textarea:focus, input:focus {
   font-weight: bolder;
   font-size: 18px;
   right: 0px;
-  margin-right: 20%;
+  margin-right: 22%;
   -webkit-transform: translate(27px, 61.5px);
           transform: translate(27px, 61.5px);
   color: black;
